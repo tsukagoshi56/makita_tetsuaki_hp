@@ -85,55 +85,20 @@ const instagramHighlights = [
     title: "6C 1750 Gran Sport に再会",
     dateLabel: "2025年2月9日",
     description:
-      "木版画のモデルにもなった Alfa Romeo 6C 1750 Gran Sport に会うため、トヨタ博物館を訪れた記録。作品と実車を見比べられる貴重なフィールドノートです。",
-    quote: "「クルマ館エントランスに2月24日(月・祝)まで展示予定だそうです。」",
+      "木版画の題材となった Alfa Romeo 6C 1750 をトヨタ博物館で再訪。作品と実車を重ねながら当時の資料を振り返るフィールドレポートです。",
     image: "/instagram/DF31SBuhCQ1.jpg",
-    alt: "トヨタ博物館に展示されたアルファロメオ 6C 1750 GS の写真",
+    alt: "トヨタ博物館で展示されるアルファロメオ 6C 1750 の木版画と実車",
     link: "https://www.instagram.com/p/DF31SBuhCQ1/",
   },
   {
-    code: "DIFt85lJDFw",
-    title: "自宅展示で受け継ぐ情熱",
-    dateLabel: "2025年4月6日",
-    description:
-      "『Giro di Mikawa Enshu 2025』のオフィシャル・フォトグラファーに自宅展示を公開。牧田作品が家族とファンをつなぐ場として生き続けている様子がわかります。",
-    quote: "「父の遺影がいつもより笑っているように感じられました。」",
-    image: "/instagram/DIFt85lJDFw.jpg",
-    alt: "牧田家自宅の展示室と木版画作品の写真",
-    link: "https://www.instagram.com/p/DIFt85lJDFw/",
-  },
-  {
     code: "DJ2eP7tTvL2",
-    title: "ヴィンテージフェスで出会った新たな一枚",
+    title: "コレクションに加わったアルファロメオ版画",
     dateLabel: "2025年5月19日",
     description:
-      "豊橋のイベントで偶然見つけたアルファロメオ題材の作品を新たにコレクションへ。牧田作品を探し、手元に残そうとする家族の姿が垣間見えます。",
-    quote: "「今日から我が家の牧田哲明コレクションに仲間入りです♪」",
+      "ビンテージフェスティバルで見つけたアルファロメオの木版画をコレクションへ迎えたエピソード。作品の保存方法や背景も詳しく触れています。",
     image: "/instagram/DJ2eP7tTvL2.jpg",
-    alt: "アルファロメオの木版画を抱える家族の写真",
+    alt: "アルファロメオの木版画を手に収める様子",
     link: "https://www.instagram.com/p/DJ2eP7tTvL2/",
-  },
-  {
-    code: "DOICUankr7i",
-    title: "誕生日に振り返る木版画制作の思い",
-    dateLabel: "2025年9月3日",
-    description:
-      "家族が注文したバースデーケーキとともに、制作当時の父の心情に思いを巡らせる投稿。作品が時間を越えて語りかける様子が伝わります。",
-    quote: "「父がこの木版画をどんな気持ちで制作したのか、年齢を重ねるたびに少しずつわかるようになってきました。」",
-    image: "/instagram/DOICUankr7i.jpg",
-    alt: "木版画とケーキが並ぶテーブルの写真",
-    link: "https://www.instagram.com/p/DOICUankr7i/",
-  },
-  {
-    code: "DIYbAU2JmQd",
-    title: "ジュジャーロへの敬意",
-    dateLabel: "2025年4月13日",
-    description:
-      "幕張メッセの『AUTOMOBILE COUNCIL 2025』でジョルジェット・ジュジャーロ氏に会った記録。牧田作品と深い関わりのあるデザインへの敬意が語られています。",
-    quote: "「ご本人の姿を見られて声が聞けて本当に嬉しかったです。」",
-    image: "/instagram/DIYbAU2JmQd.jpg",
-    alt: "イベント会場で撮影されたアルファロメオ ブレラの写真",
-    link: "https://www.instagram.com/p/DIYbAU2JmQd/",
   },
 ];
 
@@ -273,10 +238,28 @@ export default function Home() {
               牧田哲明<span className="text-cyan-300">（1935 – 2022）</span>
             </h1>
             <p className="max-w-2xl text-lg text-slate-200">
-              ヒストリックカーを木版画で描き続けた版画家。モントレーからミッレミリア、国内外のイベントを通してスピードと風景、文化への敬意を版木に刻みました。2025年にはトヨタ博物館で木版画のモデルとなった Alfa Romeo 6C 1750 と再会し、作品と実車を見比べる記録も残しています。
-              最新の Instagram アーカイブでは、家族が作品と共に残した視点を共有しています。
+              ヒストリックカーを木版画で描き続けた版画家。1960年代に学生ラリーへ参加し、1980年代には瀬戸大橋やモントレーの公式ポスターを手掛け、1990年代以降はミッレミリアやル・マンを題材に連作を発表しました。
+              最新のアーカイブでは、家族が木版画とともに当時の記録を継承しています。
             </p>
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-cyan-200">
+              <a
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/60 px-4 py-2 transition hover:border-cyan-200 hover:text-cyan-100"
+                href="https://www.instagram.com/tetsuaki_makita/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+              <a
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/60 px-4 py-2 transition hover:border-cyan-200 hover:text-cyan-100"
+                href="https://nitter.net/tetsuaki_makita"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                X (旧Twitter)
+              </a>
+            </div>
+            <div className="mt-6 flex flex-wrap items-center gap-4">
               <a
                 className="inline-flex items-center justify-center rounded-full bg-cyan-400 px-8 py-3 text-sm font-semibold text-slate-900 transition hover:bg-cyan-300"
                 href="#gallery"
@@ -295,25 +278,7 @@ export default function Home() {
       </header>
 
       <main className="relative px-6 pb-24 sm:px-12 lg:px-20">
-        <section className="mx-auto max-w-5xl border border-white/10 bg-white/5 p-8 backdrop-blur sm:p-12">
-          <h2 className="text-2xl font-semibold sm:text-3xl">作品づくりの特徴</h2>
-          <p className="mt-4 text-slate-200">
-            手作業で彫りと摺りを重ね、車体の曲線やエンジンの鼓動まで伝わるような質感を追求。版木の重ね刷りがスピード感と光の表情を生み出します。Instagram の最新投稿では、その感性を受け継ぐ家族の視点から制作背景を読み解くことができます。
-          </p>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {highlights.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-white/10 bg-slate-900/80 p-6 shadow-lg shadow-slate-900/40"
-              >
-                <h3 className="text-xl font-medium text-cyan-200">{item.title}</h3>
-                <p className="mt-3 text-sm text-slate-200">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="gallery" className="mx-auto mt-24 max-w-5xl space-y-16">
+        <section id="gallery" className="mx-auto mt-20 max-w-5xl space-y-10">
           <h2 className="text-2xl font-semibold sm:text-3xl text-cyan-100">木版画で巡るヒストリックカー</h2>
           {galleryWorks.map((work, index) => (
             <ScrollReveal
@@ -321,7 +286,7 @@ export default function Home() {
               direction={index % 2 === 0 ? "left" : "right"}
             >
               <article
-                className={`flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-xl shadow-slate-950/40 ${
+                className={`flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-900/65 shadow-lg shadow-slate-950/40 ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
@@ -334,7 +299,7 @@ export default function Home() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
-                <div className="space-y-4 px-6 py-6 sm:px-10 lg:flex-1 lg:py-8">
+                <div className="space-y-3 px-6 py-6 sm:px-10 lg:flex-1 lg:py-8">
                   <h3 className="text-2xl font-semibold text-cyan-100">{work.name}</h3>
                   <p className="text-sm text-slate-200">{work.description}</p>
                   <a
@@ -351,7 +316,7 @@ export default function Home() {
           ))}
         </section>
 
-        <section id="timeline" className="mx-auto mt-24 max-w-5xl">
+        <section id="timeline" className="mx-auto mt-20 max-w-5xl">
           <h2 className="text-2xl font-semibold sm:text-3xl">主な歩み</h2>
           <div className="mt-8 space-y-6 border-l border-cyan-400/50 pl-6">
             {timeline.map((entry) => (
@@ -365,11 +330,30 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="works" className="mx-auto mt-24 max-w-5xl">
+
+        <section className="mx-auto mt-20 max-w-5xl border border-white/15 bg-white/5 p-8 backdrop-blur sm:p-12">
+          <h2 className="text-2xl font-semibold sm:text-3xl">作品づくりの特徴</h2>
+          <p className="mt-4 text-slate-200">
+            手作業で彫りと摺りを重ね、車体の曲線やエンジンの鼓動まで伝わるような質感を追求。版木の重ね刷りがスピード感と光の表情を生み出し、資料と実車のリサーチが作品世界を支えています。
+          </p>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {highlights.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl border border-white/15 bg-slate-900/80 p-6 shadow"
+              >
+                <h3 className="text-xl font-medium text-cyan-200">{item.title}</h3>
+                <p className="mt-3 text-sm text-slate-200">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="works" className="mx-auto mt-20 max-w-5xl">
           <h2 className="text-2xl font-semibold sm:text-3xl">代表的な作品・シリーズ</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {works.map((work) => (
-              <div key={work.name} className="rounded-2xl bg-slate-800/80 p-6 shadow-inner">
+              <div key={work.name} className="rounded-xl bg-slate-800/80 p-6 shadow-inner">
                 <h3 className="text-lg font-medium text-cyan-100">{work.name}</h3>
                 <p className="mt-3 text-sm text-slate-200">{work.detail}</p>
               </div>
@@ -379,17 +363,17 @@ export default function Home() {
 
         <section
           id="instagram"
-          className="mx-auto mt-24 max-w-5xl rounded-3xl border border-cyan-500/40 bg-cyan-500/10 p-10"
+          className="mx-auto mt-24 max-w-5xl rounded-2xl border border-white/10 bg-slate-900/65 p-8"
         >
           <h2 className="text-2xl font-semibold sm:text-3xl text-cyan-100">Instagram アーカイブから</h2>
           <p className="mt-6 text-sm text-slate-100 sm:text-base">
-            アカウント <span className="font-semibold text-cyan-200">@tetsuaki_makita</span> では、家族が作品と共に過ごした日常やイベントの記録を発信しています。以下の投稿は、木版画家としての視点だけでなく、牧田家がどのように遺産を守り伝えているかを示す貴重な一次情報です。
+            アカウント <span className="font-semibold text-cyan-200">@tetsuaki_makita</span> では、家族が作品と共に過ごした日常やイベントの記録を発信しています。投稿をたどると、木版画と共に歩んだ家族の記録を断片的に辿れます。
           </p>
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {instagramHighlights.map((post) => (
               <article
                 key={post.code}
-                className="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/80 shadow-lg shadow-slate-900/40"
+                className="overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 shadow-md"
               >
                 <div className="relative h-56 sm:h-64">
                   <Image
@@ -400,13 +384,9 @@ export default function Home() {
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
-                <div className="space-y-4 p-6 sm:p-8">
-                  <p className="text-xs uppercase tracking-[0.3em] text-cyan-200">{post.dateLabel}</p>
+                <div className="space-y-3 p-6">
                   <h3 className="text-xl font-semibold text-slate-50">{post.title}</h3>
                   <p className="text-sm text-slate-200">{post.description}</p>
-                  <blockquote className="border-l-2 border-cyan-300/60 pl-4 text-sm italic text-cyan-100">
-                    {post.quote}
-                  </blockquote>
                   <div>
                     <a
                       className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 underline decoration-dotted underline-offset-4 transition hover:text-cyan-100"
@@ -422,17 +402,9 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-6 text-xs text-slate-300">
-            ※ Instagram の投稿内容・画像は 2025年4月〜9月の公開情報をもとに引用しています。
+            ※ Instagram の投稿内容・画像は公開時点の情報をもとに引用しています。
           </p>
         </section>
-
-        <section className="mx-auto mt-24 max-w-4xl rounded-3xl border border-cyan-500/40 bg-cyan-500/10 p-10">
-          <h2 className="text-2xl font-semibold sm:text-3xl text-cyan-100">制作背景とこだわり</h2>
-          <p className="mt-6 text-sm text-slate-100 sm:text-base">
-            「本当に版画の良さを理解している人、題材と深く関係する人からの依頼だけを受ける」と語り、企業案件でも妥協しない制作姿勢を保ちました。モデルや資料の綿密な収集と、音楽家ウェス・モンゴメリーから受けたインスピレーションを制作時のリズムに重ねていたと言われています。
-          </p>
-        </section>
-
         <section className="mx-auto mt-24 max-w-4xl">
           <h2 className="text-2xl font-semibold sm:text-3xl">関連リンク</h2>
           <ul className="mt-6 space-y-3 text-sm text-slate-200">
