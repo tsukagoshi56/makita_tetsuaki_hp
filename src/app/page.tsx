@@ -219,12 +219,17 @@ function ScrollReveal({
       return;
     }
 
+    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
+      element.classList.add("reveal-visible");
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("reveal-visible");
-            observer.unobserve(entry.target);
+            observer.unobserve(entry.target as Element);
           }
         });
       },
