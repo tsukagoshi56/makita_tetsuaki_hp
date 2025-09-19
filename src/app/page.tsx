@@ -235,11 +235,11 @@ export default function Home() {
           <div className="mx-auto flex max-w-4xl flex-col gap-8">
             <p className="text-sm uppercase tracking-[0.25em] text-cyan-300/80">Automotive Woodblock Printmaker</p>
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
-              牧田哲明<span className="text-cyan-300">（1935 – 2022）</span>
+              牧田哲明<span className="text-cyan-300">（1935 – 2022／享年 88）</span>
             </h1>
             <p className="max-w-2xl text-lg text-slate-200">
               ヒストリックカーを木版画で描き続けた版画家。1960年代に学生ラリーへ参加し、1980年代には瀬戸大橋やモントレーの公式ポスターを手掛け、1990年代以降はミッレミリアやル・マンを題材に連作を発表しました。
-              最新のアーカイブでは、家族が木版画とともに当時の記録を継承しています。
+              最新のアーカイブでは、娘、京子が木版画とともに当時の記録を継承しています。
             </p>
             <div className="flex flex-wrap items-center gap-3 text-sm font-semibold text-cyan-200">
               <a
@@ -252,7 +252,7 @@ export default function Home() {
               </a>
               <a
                 className="inline-flex items-center gap-2 rounded-full border border-cyan-400/60 px-4 py-2 transition hover:border-cyan-200 hover:text-cyan-100"
-                href="https://nitter.net/tetsuaki_makita"
+                href="https://x.com/tetsuaki_makita"
                 target="_blank"
                 rel="noopener noreferrer"
               >
