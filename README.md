@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Makita Home
 
-## Getting Started
+Vercel へのデプロイを想定した Next.js 13 (App Router) + Tailwind CSS のホームページです。ローカルでの開発と本番公開の手順をこのドキュメントにまとめています。
 
-First, run the development server:
+## 開発環境のセットアップ
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Node.js 18 以上を用意します（`node -v` で確認できます）。
+2. 依存パッケージをインストールします。
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   npm install
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. 開発サーバーを起動し、`http://localhost:3000` にアクセスします。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+変更はホットリロードされるため、`src/app/page.tsx` を編集するとブラウザに即時反映されます。
 
-To learn more about Next.js, take a look at the following resources:
+## 利用できる npm スクリプト
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev`: 開発サーバーを起動します。
+- `npm run build`: 本番ビルドを作成します。
+- `npm run start`: ビルド済みアプリをローカルで起動します。
+- `npm run lint`: ESLint による静的解析を実行します。
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Vercel で公開する手順
 
-## Deploy on Vercel
+1. GitHub / GitLab / Bitbucket いずれかのリポジトリにこのプロジェクトを push します。
+2. [Vercel](https://vercel.com/) にログインし、「New Project」をクリックします。
+3. 1 で用意したリポジトリをインポートすると、フレームワークとして Next.js が自動認識されます。
+4. ビルドコマンド、出力ディレクトリ（`.next`）は自動設定されるため、そのまま「Deploy」を実行します。
+5. 数十秒ほどでデプロイが完了し、`https://xxxx.vercel.app` のようなプレビュー URL で公開されます。
+6. 独自ドメインを利用する場合は、プロジェクトの「Domains」タブから追加し、DNS を設定します。
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## プロジェクト構成メモ
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/page.tsx`: サイト本体のコンテンツ。Tailwind CSS でセクションを構成しています。
+- `src/app/globals.css`: 全体のスタイル。Tailwind の設定が読み込まれます。
+- `public/`: 画像やアイコンなどの静的ファイルを配置します。
+
+必要に応じてプラットフォームの分析タグやフォーム連携などを追加して、公開サイトを発展させてください。
