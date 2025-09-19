@@ -321,11 +321,20 @@ export default function Home() {
               direction={index % 2 === 0 ? "left" : "right"}
             >
               <article
-                className={`flex flex-col-reverse gap-6 overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-xl shadow-slate-950/40 lg:flex-row lg:items-center lg:gap-12 ${
-                  index % 2 === 0 ? "" : "lg:flex-row-reverse"
+                className={`flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/70 shadow-xl shadow-slate-950/40 ${
+                  index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >
-                <div className="flex-1 space-y-4 px-6 pb-6 pt-0 sm:px-10 lg:py-8">
+                <div className="relative h-64 w-full sm:h-80 lg:flex-1 lg:min-h-[22rem]">
+                  <Image
+                    src={work.image}
+                    alt={work.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+                <div className="space-y-4 px-6 py-6 sm:px-10 lg:flex-1 lg:py-8">
                   <h3 className="text-2xl font-semibold text-cyan-100">{work.name}</h3>
                   <p className="text-sm text-slate-200">{work.description}</p>
                   <a
@@ -336,15 +345,6 @@ export default function Home() {
                   >
                     Instagramで詳しく見る
                   </a>
-                </div>
-                <div className="relative h-64 w-full flex-1 sm:h-80">
-                  <Image
-                    src={work.image}
-                    alt={work.alt ?? `${work.name} の木版画を写した写真`}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
                 </div>
               </article>
             </ScrollReveal>
