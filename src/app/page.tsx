@@ -54,9 +54,9 @@ const chapters = [
   {
     chapter: "Chapter 04",
     period: "1980-1985",
-    title: "浜美展に連続出品",
+    title: "近美展に連続出品",
     detail:
-      "東京都美術館で開催された「浜美展」に毎年100号サイズの油彩画を出品。",
+      "東京都美術館で開催された「近美展」に毎年100号サイズの油彩画を出品。",
   },
   {
     chapter: "Chapter 05",
@@ -90,7 +90,7 @@ const chapters = [
     period: "2019",
     title: "豊橋駅前で個展を開催",
     detail:
-      "次女・塚越京子の企画で中部ガス名豊ギャラリーにて「牧田哲明作品展2019」を開催。",
+      "次女・京子の企画で中部ガス名豊ギャラリーにて「牧田哲明作品展2019」を開催。",
   },
   {
     chapter: "Chapter 10",
@@ -331,7 +331,7 @@ export default function Home() {
               木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代の
               クラシックレースを描き続けた。1993〜2009年にはMonterey Historic Automobile
               Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
-              近年は次女の塚越京子がSNSで作品アーカイブを紹介している。
+              近年は次女の京子がSNSで作品アーカイブを紹介している。
             </p>
             <div
               className="flex flex-wrap gap-3 cinematic-rise"
@@ -409,8 +409,8 @@ export default function Home() {
                 </p>
                 <p className="text-sm leading-relaxed text-[#3a3127]">
                   1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして
-                  毎年記念版画を制作。2022年11月23日に逝去し、現在は次女の塚越京子が
-                  SNSで作品と制作過程のアーカイブを公開している。
+                  毎年記念版画を制作。2022年11月23日に逝去し、現在は次女の京子がSNSで
+                  作品と制作過程のアーカイブを公開している。
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
@@ -623,7 +623,7 @@ export default function Home() {
               </h2>
             </div>
             <p className="max-w-xl text-sm leading-relaxed text-[#e2d4c1]">
-              次女・塚越京子によるSNSアーカイブでは、制作過程や展示風景が記録され続けている。
+              次女・京子によるSNSアーカイブでは、制作過程や展示風景が記録され続けている。
               作品の背景を知るための現代の資料室。
             </p>
           </div>
