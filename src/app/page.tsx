@@ -298,14 +298,16 @@ export default function Home() {
     <div className="min-h-screen museum-surface text-[#1f1b16]">
       <header className="relative overflow-hidden bg-[#0b1726] text-[#f6f1e7]">
         <div className="absolute inset-0">
-          <Image
-            src="/instagram/DF31SBuhCQ1.jpg"
-            alt="トヨタ博物館に展示されたアルファロメオ 6C 1750 Gran Sport"
-            fill
-            priority
-            className="object-cover brightness-[0.6] contrast-[1.1] saturate-[0.75]"
-            sizes="100vw"
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/instagram/DF31SBuhCQ1.jpg"
+            className="absolute inset-0 h-full w-full object-cover brightness-[0.7] contrast-[1.1] saturate-[0.8]"
+          >
+            <source src="/instagram/790565921.026270.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0b1726]/90 via-[#0b1726]/70 to-[#0b1726]" />
         <div className="absolute inset-0 film-grain" />
