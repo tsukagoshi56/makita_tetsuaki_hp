@@ -296,412 +296,419 @@ function ScrollReveal({
 export default function Home() {
   return (
     <div className="min-h-screen museum-surface text-[#1f1b16]">
-      <header className="relative overflow-hidden bg-[#0b1726] text-[#f6f1e7]">
-        <div className="absolute inset-0">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/instagram/DF31SBuhCQ1.jpg"
-            className="absolute inset-0 h-full w-full object-cover brightness-[0.7] contrast-[1.1] saturate-[0.8]"
-          >
-            <source src="/instagram/790565921.026270.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0b1726]/90 via-[#0b1726]/70 to-[#0b1726]" />
-        <div className="absolute inset-0 film-grain" />
-        <div className="absolute inset-0 vignette" />
-        <div className="relative px-6 py-24 sm:px-12 lg:px-20">
-          <div className="mx-auto flex max-w-5xl flex-col gap-8">
-            <p
-              className="museum-label cinematic-fade text-[#d9b676]"
-              style={{ animationDelay: "0.1s" }}
+      <div className="relative z-0">
+        <section className="relative h-screen w-full overflow-hidden bg-[#0b1726]">
+          <div className="absolute inset-0">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/instagram/DF31SBuhCQ1.jpg"
+              className="h-full w-full object-cover brightness-[0.7] contrast-[1.1] saturate-[0.8]"
             >
-              Entrance Hall
-            </p>
-            <h1
-              className="font-display text-4xl leading-tight sm:text-5xl lg:text-6xl cinematic-rise"
-              style={{ animationDelay: "0.2s" }}
-            >
-              牧田哲明 <span className="text-[#d9b676]">1935 — 2022</span>
-            </h1>
-            <p
-              className="max-w-2xl text-lg text-[#f0e6d8] cinematic-rise"
-              style={{ animationDelay: "0.35s" }}
-            >
-              木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代の
-              クラシックレースを描き続けた。1993〜2009年にはMonterey Historic Automobile
-              Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
-              近年は次女の京子がSNSで作品アーカイブを紹介している。
-            </p>
-            <div
-              className="flex flex-wrap gap-3 cinematic-rise"
-              style={{ animationDelay: "0.5s" }}
-            >
-              <a
-                className="inline-flex items-center justify-center rounded-full bg-[#d9b676] px-6 py-3 text-sm font-semibold text-[#1f1b16] transition hover:bg-[#f0d49a]"
-                href="#chapters"
+              <source src="/instagram/790565921.026270.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0b1726]/30 via-transparent to-[#0b1726]/90" />
+          <div className="absolute inset-0 film-grain" />
+          <div className="absolute inset-0 vignette" />
+
+          <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center justify-center gap-4 text-[#d9b676] opacity-80 mix-blend-screen cinematic-fade" style={{ animationDelay: "2s" }}>
+            <span className="text-xs uppercase tracking-[0.3em]">Scroll to Explore</span>
+            <div className="h-12 w-px bg-gradient-to-b from-[#d9b676] to-transparent" />
+          </div>
+        </section>
+
+        <section className="relative z-10 -mt-20 bg-gradient-to-b from-transparent to-[#0b1726] pt-32 pb-24 text-[#f6f1e7]">
+          <div className="relative px-6 sm:px-12 lg:px-20">
+            <div className="mx-auto flex max-w-5xl flex-col gap-8">
+              <p
+                className="museum-label cinematic-fade text-[#d9b676]"
+                style={{ animationDelay: "0.1s" }}
               >
-                年代記へ
-              </a>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-[#d9b676]/70 px-6 py-3 text-sm font-semibold text-[#f6f1e7] transition hover:border-[#f0d49a] hover:text-[#f0d49a]"
-                href="#gallery"
+                Entrance Hall
+              </p>
+              <h1
+                className="font-display text-4xl leading-tight sm:text-5xl lg:text-6xl cinematic-rise"
+                style={{ animationDelay: "0.2s" }}
               >
-                展示室へ
-              </a>
-              <a
-                className="inline-flex items-center justify-center rounded-full border border-[#6b7b8f]/60 px-6 py-3 text-sm font-semibold text-[#d8c5a7] transition hover:border-[#d9b676] hover:text-[#f0d49a]"
-                href="#archive"
+                牧田哲明 <span className="text-[#d9b676]">1935 — 2022</span>
+              </h1>
+              <p
+                className="max-w-2xl text-lg text-[#f0e6d8] cinematic-rise"
+                style={{ animationDelay: "0.35s" }}
               >
-                家族のアーカイブ
-              </a>
-            </div>
-            <div
-              className="flex flex-wrap items-center gap-4 text-sm text-[#d8c5a7] cinematic-fade"
-              style={{ animationDelay: "0.6s" }}
-            >
-              <a
-                className="inline-flex items-center gap-2 border-b border-transparent transition hover:border-[#d9b676]"
-                href="https://www.instagram.com/tetsuaki_makita/"
-                target="_blank"
-                rel="noopener noreferrer"
+                木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代の
+                クラシックレースを描き続けた。1993〜2009年にはMonterey Historic Automobile
+                Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
+                近年は次女の京子がSNSで作品アーカイブを紹介している。
+              </p>
+              <div
+                className="flex flex-wrap gap-3 cinematic-rise"
+                style={{ animationDelay: "0.5s" }}
               >
-                Instagram
-              </a>
-              <a
-                className="inline-flex items-center gap-2 border-b border-transparent transition hover:border-[#d9b676]"
-                href="https://x.com/tetsuaki_makita"
-                target="_blank"
-                rel="noopener noreferrer"
+                <a
+                  className="inline-flex items-center justify-center rounded-full bg-[#d9b676] px-6 py-3 text-sm font-semibold text-[#1f1b16] transition hover:bg-[#f0d49a]"
+                  href="#chapters"
+                >
+                  年代記へ
+                </a>
+                <a
+                  className="inline-flex items-center justify-center rounded-full border border-[#d9b676]/70 px-6 py-3 text-sm font-semibold text-[#f6f1e7] transition hover:border-[#f0d49a] hover:text-[#f0d49a]"
+                  href="#gallery"
+                >
+                  展示室へ
+                </a>
+                <a
+                  className="inline-flex items-center justify-center rounded-full border border-[#6b7b8f]/60 px-6 py-3 text-sm font-semibold text-[#d8c5a7] transition hover:border-[#d9b676] hover:text-[#f0d49a]"
+                  href="#archive"
+                >
+                  家族のアーカイブ
+                </a>
+              </div>
+              <div
+                className="flex flex-wrap items-center gap-4 text-sm text-[#d8c5a7] cinematic-fade"
+                style={{ animationDelay: "0.6s" }}
               >
-                X (旧Twitter)
-              </a>
-              <a
-                className="inline-flex items-center gap-2 border-b border-transparent transition hover:border-[#d9b676]"
-                href="https://www.facebook.com/tetsuaki104makita"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
+                <a
+                  className="inline-flex items-center gap-2 border-b border-transparent transition hover:border-[#d9b676]"
+                  href="https://www.instagram.com/tetsuaki_makita/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+                <a
+                  className="inline-flex items-center gap-2 border-b border-transparent transition hover:border-[#d9b676]"
+                  href="https://x.com/tetsuaki_makita"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  X (旧Twitter)
+                </a>
+                <a
+                  className="inline-flex items-center gap-2 border-b border-transparent transition hover:border-[#d9b676]"
+                  href="https://www.facebook.com/tetsuaki104makita"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="relative h-10 bg-[#0b1726]">
-          <div className="absolute inset-x-0 top-0 h-px bg-[#d9b676]/50" />
-          <div className="absolute inset-x-0 bottom-0 h-px bg-[#d9b676]/20" />
-        </div>
-      </header>
+          <div className="relative mt-24 h-px bg-[#d9b676]/20 mx-6 sm:mx-12 lg:mx-20" />
+        </section>
 
-      <main className="relative px-6 pb-24 pt-10 sm:px-12 lg:px-20">
-        <section id="prologue" className="mx-auto mt-8 max-w-6xl">
-          <div className="rounded-3xl border border-[#d8c8b2] bg-white/90 p-8 shadow-xl backdrop-blur">
-            <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-              <div className="space-y-4">
-                <p className="museum-label">Prologue</p>
+        <main className="relative px-6 pb-24 pt-10 sm:px-12 lg:px-20 bg-[#f6f1e7]">
+          <section id="prologue" className="mx-auto mt-8 max-w-6xl">
+            <div className="rounded-3xl border border-[#d8c8b2] bg-white/90 p-8 shadow-xl backdrop-blur">
+              <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+                <div className="space-y-4">
+                  <p className="museum-label">Prologue</p>
+                  <h2 className="font-display text-3xl text-[#1f1b16]">
+                    木版画で辿る自動車史
+                  </h2>
+                  <p className="text-sm leading-relaxed text-[#3a3127]">
+                    牧田哲明は戦前生まれの世代ながら、自動車レースやクラシックカーを題材に
+                    独自の木版画作品を制作し、国内外に名を知られた版画家。若い頃から
+                    アルファロメオに魅了され、イタリアのクラシックレースに惹かれ続けた。
+                  </p>
+                  <p className="text-sm leading-relaxed text-[#3a3127]">
+                    1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして
+                    毎年記念版画を制作。2022年11月23日に逝去し、現在は次女の京子がSNSで
+                    作品と制作過程のアーカイブを公開している。
+                  </p>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {prologueFacts.map((fact) => (
+                    <div
+                      key={fact.label}
+                      className="rounded-2xl border border-[#d8c8b2] bg-[#fdfaf4] p-4"
+                    >
+                      <p className="museum-label text-[#8a6a45]">{fact.label}</p>
+                      <p className="mt-2 text-sm font-medium text-[#1f1b16]">
+                        {fact.value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="chapters" className="mx-auto mt-24 max-w-6xl">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="museum-label">Chronicle</p>
+                <h2 className="font-display text-3xl text-[#1f1b16]">年代記</h2>
+              </div>
+              <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
+                学生時代の美術活動から国際イベントの公式版画制作まで。
+                章立てで足跡をたどり、木版画が紡いだ自動車史の流れを追う。
+              </p>
+            </div>
+            <div className="relative mt-10">
+              <div className="absolute left-4 top-0 hidden h-full w-px bg-[#c9b8a3] sm:block" />
+              <div className="space-y-6">
+                {chapters.map((chapter, index) => (
+                  <ScrollReveal
+                    key={chapter.title}
+                    direction={index % 2 === 0 ? "left" : "right"}
+                  >
+                    <div className="relative sm:pl-10">
+                      <span className="absolute left-3 top-6 hidden h-3 w-3 rounded-full bg-[#c8a36a] sm:block" />
+                      <div className="rounded-2xl border border-[#dbcab4] bg-white/90 p-6 shadow-sm">
+                        <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-[#7a5d3a]">
+                          <span>{chapter.chapter}</span>
+                          <span className="text-[#1f1b16] font-semibold">
+                            {chapter.period}
+                          </span>
+                        </div>
+                        <h3 className="mt-3 font-display text-2xl text-[#1f1b16]">
+                          {chapter.title}
+                        </h3>
+                        <p className="mt-3 text-sm text-[#3a3127]">
+                          {chapter.detail}
+                        </p>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          <section id="gallery" className="mx-auto mt-24 max-w-6xl">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="museum-label">Exhibit</p>
+                <h2 className="font-display text-3xl text-[#1f1b16]">展示室</h2>
+              </div>
+              <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
+                版木の重ね刷りで生まれた名場面を、展示室を巡るように鑑賞する。
+                作品ごとに時代の空気やレースの緊張感が立ち上がる。
+              </p>
+            </div>
+            <div className="mt-10 grid gap-8 lg:grid-cols-2">
+              {exhibitGallery.map((work, index) => (
+                <ScrollReveal
+                  key={work.name}
+                  direction={index % 2 === 0 ? "left" : "right"}
+                >
+                  <article className="group relative overflow-hidden rounded-3xl border border-[#1b2736] bg-[#0f1b2b] text-[#f6f1e7] shadow-2xl">
+                    <div className="relative h-64 sm:h-72">
+                      <Image
+                        src={work.image}
+                        alt={work.alt}
+                        fill
+                        className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b2b]/85 via-[#0f1b2b]/20 to-transparent" />
+                    </div>
+                    <div className="space-y-3 p-6">
+                      <p className="museum-label text-[#d9b676]">{work.room}</p>
+                      <h3 className="font-display text-2xl text-[#f7efe2]">
+                        {work.name}
+                      </h3>
+                      <p className="text-sm text-[#e6dccc]">{work.description}</p>
+                      <a
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-[#f0d49a] underline decoration-dotted underline-offset-4 transition hover:text-[#f6e5bf]"
+                        href={work.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        作品記録を見る
+                      </a>
+                    </div>
+                  </article>
+                </ScrollReveal>
+              ))}
+            </div>
+          </section>
+
+          <section id="works" className="mx-auto mt-24 max-w-6xl">
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="museum-label">Signature Works</p>
                 <h2 className="font-display text-3xl text-[#1f1b16]">
-                  木版画で辿る自動車史
+                  代表作・シリーズ
                 </h2>
-                <p className="text-sm leading-relaxed text-[#3a3127]">
-                  牧田哲明は戦前生まれの世代ながら、自動車レースやクラシックカーを題材に
-                  独自の木版画作品を制作し、国内外に名を知られた版画家。若い頃から
-                  アルファロメオに魅了され、イタリアのクラシックレースに惹かれ続けた。
-                </p>
-                <p className="text-sm leading-relaxed text-[#3a3127]">
-                  1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして
-                  毎年記念版画を制作。2022年11月23日に逝去し、現在は次女の京子がSNSで
-                  作品と制作過程のアーカイブを公開している。
+              </div>
+              <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
+                木版画で切り取られたクラシックレースの記憶。年代ごとに代表作を整理し、
+                作品の背景にある物語を浮かび上がらせる。
+              </p>
+            </div>
+            <div className="mt-10 grid gap-6 md:grid-cols-2">
+              {signatureWorks.map((work) => (
+                <div
+                  key={work.name}
+                  className="rounded-2xl border border-[#dbcab4] bg-[#fdfaf4] p-6 shadow-sm"
+                >
+                  <p className="museum-label text-[#8a6a45]">Signature</p>
+                  <h3 className="mt-2 font-display text-xl text-[#1f1b16]">
+                    {work.name}
+                  </h3>
+                  <p className="mt-3 text-sm text-[#3a3127]">{work.detail}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section id="craft" className="mx-auto mt-24 max-w-6xl">
+            <div className="rounded-3xl border border-[#dbcab4] bg-white/90 p-8 shadow-lg">
+              <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                  <p className="museum-label">Craft</p>
+                  <h2 className="font-display text-3xl text-[#1f1b16]">
+                    作品づくりの特徴
+                  </h2>
+                </div>
+                <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
+                  木版画の技法と資料調査が支える精緻なディテール。モータースポーツへの情熱が
+                  画面の隅々にまで息づいている。
                 </p>
               </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {prologueFacts.map((fact) => (
+              <div className="mt-8 grid gap-6 md:grid-cols-3">
+                {craftNotes.map((item) => (
                   <div
-                    key={fact.label}
-                    className="rounded-2xl border border-[#d8c8b2] bg-[#fdfaf4] p-4"
+                    key={item.title}
+                    className="rounded-2xl border border-[#dbcab4] bg-[#fdfaf4] p-6"
                   >
-                    <p className="museum-label text-[#8a6a45]">{fact.label}</p>
-                    <p className="mt-2 text-sm font-medium text-[#1f1b16]">
-                      {fact.value}
+                    <h3 className="font-display text-xl text-[#1f1b16]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-3 text-sm text-[#3a3127]">
+                      {item.description}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="chapters" className="mx-auto mt-24 max-w-6xl">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="museum-label">Chronicle</p>
-              <h2 className="font-display text-3xl text-[#1f1b16]">年代記</h2>
-            </div>
-            <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
-              学生時代の美術活動から国際イベントの公式版画制作まで。
-              章立てで足跡をたどり、木版画が紡いだ自動車史の流れを追う。
-            </p>
-          </div>
-          <div className="relative mt-10">
-            <div className="absolute left-4 top-0 hidden h-full w-px bg-[#c9b8a3] sm:block" />
-            <div className="space-y-6">
-              {chapters.map((chapter, index) => (
-                <ScrollReveal
-                  key={chapter.title}
-                  direction={index % 2 === 0 ? "left" : "right"}
-                >
-                  <div className="relative sm:pl-10">
-                    <span className="absolute left-3 top-6 hidden h-3 w-3 rounded-full bg-[#c8a36a] sm:block" />
-                    <div className="rounded-2xl border border-[#dbcab4] bg-white/90 p-6 shadow-sm">
-                      <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.25em] text-[#7a5d3a]">
-                        <span>{chapter.chapter}</span>
-                        <span className="text-[#1f1b16] font-semibold">
-                          {chapter.period}
-                        </span>
-                      </div>
-                      <h3 className="mt-3 font-display text-2xl text-[#1f1b16]">
-                        {chapter.title}
-                      </h3>
-                      <p className="mt-3 text-sm text-[#3a3127]">
-                        {chapter.detail}
-                      </p>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="gallery" className="mx-auto mt-24 max-w-6xl">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="museum-label">Exhibit</p>
-              <h2 className="font-display text-3xl text-[#1f1b16]">展示室</h2>
-            </div>
-            <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
-              版木の重ね刷りで生まれた名場面を、展示室を巡るように鑑賞する。
-              作品ごとに時代の空気やレースの緊張感が立ち上がる。
-            </p>
-          </div>
-          <div className="mt-10 grid gap-8 lg:grid-cols-2">
-            {exhibitGallery.map((work, index) => (
-              <ScrollReveal
-                key={work.name}
-                direction={index % 2 === 0 ? "left" : "right"}
-              >
-                <article className="group relative overflow-hidden rounded-3xl border border-[#1b2736] bg-[#0f1b2b] text-[#f6f1e7] shadow-2xl">
-                  <div className="relative h-64 sm:h-72">
-                    <Image
-                      src={work.image}
-                      alt={work.alt}
-                      fill
-                      className="object-cover transition duration-700 group-hover:scale-[1.03]"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0f1b2b]/85 via-[#0f1b2b]/20 to-transparent" />
-                  </div>
-                  <div className="space-y-3 p-6">
-                    <p className="museum-label text-[#d9b676]">{work.room}</p>
-                    <h3 className="font-display text-2xl text-[#f7efe2]">
-                      {work.name}
-                    </h3>
-                    <p className="text-sm text-[#e6dccc]">{work.description}</p>
-                    <a
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#f0d49a] underline decoration-dotted underline-offset-4 transition hover:text-[#f6e5bf]"
-                      href={work.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      作品記録を見る
-                    </a>
-                  </div>
-                </article>
-              </ScrollReveal>
-            ))}
-          </div>
-        </section>
-
-        <section id="works" className="mx-auto mt-24 max-w-6xl">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="museum-label">Signature Works</p>
-              <h2 className="font-display text-3xl text-[#1f1b16]">
-                代表作・シリーズ
-              </h2>
-            </div>
-            <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
-              木版画で切り取られたクラシックレースの記憶。年代ごとに代表作を整理し、
-              作品の背景にある物語を浮かび上がらせる。
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {signatureWorks.map((work) => (
-              <div
-                key={work.name}
-                className="rounded-2xl border border-[#dbcab4] bg-[#fdfaf4] p-6 shadow-sm"
-              >
-                <p className="museum-label text-[#8a6a45]">Signature</p>
-                <h3 className="mt-2 font-display text-xl text-[#1f1b16]">
-                  {work.name}
-                </h3>
-                <p className="mt-3 text-sm text-[#3a3127]">{work.detail}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="craft" className="mx-auto mt-24 max-w-6xl">
-          <div className="rounded-3xl border border-[#dbcab4] bg-white/90 p-8 shadow-lg">
+          <section id="collections" className="mx-auto mt-24 max-w-6xl">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <p className="museum-label">Craft</p>
+                <p className="museum-label">Collections</p>
                 <h2 className="font-display text-3xl text-[#1f1b16]">
-                  作品づくりの特徴
+                  所蔵・展示の記録
                 </h2>
               </div>
               <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
-                木版画の技法と資料調査が支える精緻なディテール。モータースポーツへの情熱が
-                画面の隅々にまで息づいている。
+                作品は自動車関連の展示施設や企画展で紹介され、実車とともに鑑賞される機会も
+                作られてきた。
               </p>
             </div>
-            <div className="mt-8 grid gap-6 md:grid-cols-3">
-              {craftNotes.map((item) => (
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              {collections.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-[#dbcab4] bg-[#fdfaf4] p-6"
+                  className="rounded-2xl border border-[#dbcab4] bg-[#fdfaf4] p-6 shadow-sm"
                 >
-                  <h3 className="font-display text-xl text-[#1f1b16]">
+                  <p className="museum-label text-[#8a6a45]">Collection</p>
+                  <h3 className="mt-2 font-display text-xl text-[#1f1b16]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-sm text-[#3a3127]">
-                    {item.description}
-                  </p>
+                  <p className="mt-3 text-sm text-[#3a3127]">{item.detail}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="collections" className="mx-auto mt-24 max-w-6xl">
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="museum-label">Collections</p>
-              <h2 className="font-display text-3xl text-[#1f1b16]">
-                所蔵・展示の記録
-              </h2>
-            </div>
-            <p className="max-w-xl text-sm leading-relaxed text-[#3a3127]">
-              作品は自動車関連の展示施設や企画展で紹介され、実車とともに鑑賞される機会も
-              作られてきた。
-            </p>
-          </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {collections.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-[#dbcab4] bg-[#fdfaf4] p-6 shadow-sm"
-              >
-                <p className="museum-label text-[#8a6a45]">Collection</p>
-                <h3 className="mt-2 font-display text-xl text-[#1f1b16]">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm text-[#3a3127]">{item.detail}</p>
+          <section
+            id="archive"
+            className="mx-auto mt-24 max-w-6xl rounded-3xl border border-[#182332] bg-[#101c2b] p-8 text-[#f6f1e7] shadow-2xl"
+          >
+            <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <p className="museum-label text-[#d9b676]">Archive</p>
+                <h2 className="font-display text-3xl text-[#f7efe2]">
+                  家族が紡ぐアーカイブ
+                </h2>
               </div>
-            ))}
-          </div>
-        </section>
-
-        <section
-          id="archive"
-          className="mx-auto mt-24 max-w-6xl rounded-3xl border border-[#182332] bg-[#101c2b] p-8 text-[#f6f1e7] shadow-2xl"
-        >
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-            <div>
-              <p className="museum-label text-[#d9b676]">Archive</p>
-              <h2 className="font-display text-3xl text-[#f7efe2]">
-                家族が紡ぐアーカイブ
-              </h2>
+              <p className="max-w-xl text-sm leading-relaxed text-[#e2d4c1]">
+                次女・京子によるSNSアーカイブでは、制作過程や展示風景が記録され続けている。
+                作品の背景を知るための現代の資料室。
+              </p>
             </div>
-            <p className="max-w-xl text-sm leading-relaxed text-[#e2d4c1]">
-              次女・京子によるSNSアーカイブでは、制作過程や展示風景が記録され続けている。
-              作品の背景を知るための現代の資料室。
+            <div className="mt-10 grid gap-6 lg:grid-cols-2">
+              {archiveHighlights.map((post) => (
+                <article
+                  key={post.code}
+                  className="overflow-hidden rounded-2xl border border-white/10 bg-[#122033] shadow-md"
+                >
+                  <div className="relative h-56 sm:h-64">
+                    <Image
+                      src={post.image}
+                      alt={post.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#101c2b]/70 via-transparent to-transparent" />
+                  </div>
+                  <div className="space-y-3 p-6">
+                    <p className="museum-label text-[#d9b676]">{post.dateLabel}</p>
+                    <h3 className="font-display text-xl text-[#f7efe2]">
+                      {post.title}
+                    </h3>
+                    <p className="text-sm text-[#e2d4c1]">{post.description}</p>
+                    <div>
+                      <a
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-[#f0d49a] underline decoration-dotted underline-offset-4 transition hover:text-[#f6e5bf]"
+                        href={post.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Instagramで投稿を見る
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="mt-6 text-xs text-[#d7c7af]">
+              ※ Instagram の投稿内容・画像は公開時点の情報をもとに引用しています。
             </p>
-          </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {archiveHighlights.map((post) => (
-              <article
-                key={post.code}
-                className="overflow-hidden rounded-2xl border border-white/10 bg-[#122033] shadow-md"
-              >
-                <div className="relative h-56 sm:h-64">
-                  <Image
-                    src={post.image}
-                    alt={post.alt}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#101c2b]/70 via-transparent to-transparent" />
-                </div>
-                <div className="space-y-3 p-6">
-                  <p className="museum-label text-[#d9b676]">{post.dateLabel}</p>
-                  <h3 className="font-display text-xl text-[#f7efe2]">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-[#e2d4c1]">{post.description}</p>
-                  <div>
+          </section>
+
+          <section id="links" className="mx-auto mt-24 max-w-5xl">
+            <div className="rounded-3xl border border-[#dbcab4] bg-white/90 p-8 shadow-lg">
+              <p className="museum-label">References</p>
+              <h2 className="font-display text-3xl text-[#1f1b16]">関連リンク</h2>
+              <ul className="mt-6 space-y-3 text-sm text-[#3a3127]">
+                {links.map((item) => (
+                  <li key={item.href}>
                     <a
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#f0d49a] underline decoration-dotted underline-offset-4 transition hover:text-[#f6e5bf]"
-                      href={post.link}
+                      className="text-[#6b4f2c] underline decoration-dotted underline-offset-4 transition hover:text-[#2f2418]"
+                      href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Instagramで投稿を見る
+                      {item.label}
                     </a>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-          <p className="mt-6 text-xs text-[#d7c7af]">
-            ※ Instagram の投稿内容・画像は公開時点の情報をもとに引用しています。
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-4 text-xs text-[#6b5a47]">
+                ※ 経歴情報は Wikipedia「牧田哲明」および WESファンクラブ内「牧田哲明木版画」特集記事、
+                Instagram @tetsuaki_makita の公開投稿を参照しています。
+              </p>
+            </div>
+          </section>
+        </main>
+
+        <footer className="border-t border-[#d8c8b2]/70 bg-[#f3ecdf] px-6 py-10 text-center text-xs text-[#6b5a47] sm:px-12">
+          <p>
+            © {new Date().getFullYear()} Tribute to Tetsuaki Makita. A curated
+            chronicle of automotive woodblock prints.
           </p>
-        </section>
-
-        <section id="links" className="mx-auto mt-24 max-w-5xl">
-          <div className="rounded-3xl border border-[#dbcab4] bg-white/90 p-8 shadow-lg">
-            <p className="museum-label">References</p>
-            <h2 className="font-display text-3xl text-[#1f1b16]">関連リンク</h2>
-            <ul className="mt-6 space-y-3 text-sm text-[#3a3127]">
-              {links.map((item) => (
-                <li key={item.href}>
-                  <a
-                    className="text-[#6b4f2c] underline decoration-dotted underline-offset-4 transition hover:text-[#2f2418]"
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-4 text-xs text-[#6b5a47]">
-              ※ 経歴情報は Wikipedia「牧田哲明」および WESファンクラブ内「牧田哲明木版画」特集記事、
-              Instagram @tetsuaki_makita の公開投稿を参照しています。
-            </p>
-          </div>
-        </section>
-      </main>
-
-      <footer className="border-t border-[#d8c8b2]/70 bg-[#f3ecdf] px-6 py-10 text-center text-xs text-[#6b5a47] sm:px-12">
-        <p>
-          © {new Date().getFullYear()} Tribute to Tetsuaki Makita. A curated
-          chronicle of automotive woodblock prints.
-        </p>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 }
