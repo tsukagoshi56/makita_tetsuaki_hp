@@ -305,7 +305,7 @@ export default function Home() {
               loop
               playsInline
               poster="/instagram/DF31SBuhCQ1.jpg"
-              className="h-full w-full object-cover brightness-[0.7] contrast-[1.1] saturate-[0.8]"
+              className="h-full w-full object-contain md:object-cover brightness-[0.7] contrast-[1.1] saturate-[0.8]"
             >
               <source src="/instagram/790565921.026270.mp4" type="video/mp4" />
             </video>
