@@ -311,141 +311,95 @@ export default function Home() {
   return (
     <div className="min-h-screen museum-surface text-[#1f1b16]">
       <div className="relative z-0 bg-black">
-        <section className="fixed inset-0 z-0 h-full w-full overflow-hidden bg-black">
-          <div className="absolute inset-0 flex items-center justify-center">
+        <section className="relative h-screen w-full overflow-hidden bg-black">
+          {/* Background Video */}
+          <div className="absolute inset-0 z-0">
             <video
               autoPlay
               muted
               loop
               playsInline
               poster="/instagram/DF31SBuhCQ1.jpg"
-              className="h-full w-full object-contain md:object-cover brightness-[0.7] contrast-[1.1] saturate-[0.8]"
+              className="h-full w-full object-cover brightness-[0.7] contrast-[1.1] saturate-[0.8]"
             >
               <source src="/instagram/790565921.026270.mp4" type="video/mp4" />
             </video>
+            {/* Overlay Gradient for Text Readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+            <div className="absolute inset-0 film-grain" />
+            <div className="absolute inset-0 vignette" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80" />
-          <div className="absolute inset-0 film-grain" />
-          <div className="absolute inset-0 vignette" />
-        </section>
 
-        {/* Scroll Spacer to allow seeing the video before content rides up */}
-        <div className="relative z-10 h-screen w-full pointer-events-none">
-          <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center justify-center gap-4 text-[#d9b676] opacity-80 mix-blend-screen cinematic-fade" style={{ animationDelay: "2s" }}>
-            <span className="font-display text-sm uppercase tracking-[0.2em] font-light">Scroll to Explore</span>
-            <div className="h-16 w-px bg-gradient-to-b from-[#d9b676] to-transparent" />
-          </div>
-        </div>
-
-        <section className="relative z-10 bg-gradient-to-b from-[#0b1726] to-[#0b1726]/95 pt-24 pb-24 text-[#f6f1e7] shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
-          <div className="relative px-6 sm:px-12 lg:px-20">
+          {/* Hero Content Overlay */}
+          <div className="absolute bottom-0 left-0 right-0 z-10 px-6 pb-20 sm:px-12 lg:px-20">
             <div className="mx-auto max-w-7xl">
-              <div className="grid gap-12 lg:grid-cols-[1fr_auto]">
-                <div className="flex flex-col gap-10">
+              <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+                <div className="space-y-8">
                   <div>
                     <p
-                      className="museum-label cinematic-fade text-[#d9b676]"
-                      style={{ animationDelay: "0.1s" }}
+                      className="museum-label text-[#d9b676] opacity-0 animate-[cinematic-fade_1.5s_ease-out_forwards]"
+                      style={{ animationDelay: "0.5s" }}
                     >
-                      Entrance Hall
+                      Automotive Woodblock Artist
                     </p>
                     <h1
-                      className="mt-4 font-display text-5xl leading-tight sm:text-6xl lg:text-7xl cinematic-rise"
-                      style={{ animationDelay: "0.2s" }}
+                      className="mt-4 font-display text-5xl leading-tight sm:text-6xl lg:text-7xl text-[#f6f1e7] opacity-0 animate-[cinematic-rise_1.5s_ease-out_forwards]"
+                      style={{ animationDelay: "0.7s" }}
                     >
                       牧田哲明 <span className="block text-2xl text-[#d9b676] sm:inline sm:text-3xl sm:ml-4">1935 — 2022</span>
                     </h1>
                   </div>
 
                   <div
-                    className="flex flex-wrap gap-4 cinematic-rise"
-                    style={{ animationDelay: "0.4s" }}
+                    className="max-w-2xl text-base sm:text-lg tracking-wide text-[#d8c5a7] leading-loose opacity-0 animate-[cinematic-rise_1.5s_ease-out_forwards]"
+                    style={{ animationDelay: "1s" }}
+                  >
+                    <p className="mb-4">
+                      木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代のクラシックレースを描き続けた。
+                    </p>
+                    <p>
+                      現在は次女の京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
+                    </p>
+                  </div>
+
+                  <div
+                    className="flex flex-wrap gap-4 opacity-0 animate-[cinematic-rise_1.5s_ease-out_forwards]"
+                    style={{ animationDelay: "1.2s" }}
                   >
                     <a
-                      className="inline-flex items-center justify-center rounded-sm border border-[#d9b676] bg-[#d9b676]/10 px-8 py-3 text-sm font-medium text-[#d9b676] backdrop-blur transition hover:bg-[#d9b676] hover:text-[#0b1726]"
+                      className="inline-flex items-center justify-center rounded-sm border border-[#d9b676] bg-[#d9b676]/10 px-6 py-3 text-sm font-medium text-[#d9b676] backdrop-blur transition hover:bg-[#d9b676] hover:text-[#0b1726]"
                       href="#chapters"
                     >
                       年代記を見る
                     </a>
                     <a
-                      className="inline-flex items-center justify-center rounded-sm border border-[#f6f1e7]/30 px-8 py-3 text-sm font-medium text-[#f6f1e7] transition hover:bg-[#f6f1e7]/10"
+                      className="inline-flex items-center justify-center rounded-sm border border-[#f6f1e7]/30 px-6 py-3 text-sm font-medium text-[#f6f1e7] transition hover:bg-[#f6f1e7]/10"
                       href="#gallery"
                     >
                       展示室へ
                     </a>
-                    <a
-                      className="inline-flex items-center justify-center rounded-sm border border-[#6b7b8f]/40 px-8 py-3 text-sm font-medium text-[#d8c5a7] transition hover:border-[#d9b676] hover:text-[#f0d49a]"
-                      href="#archive"
-                    >
-                      Archives
-                    </a>
                   </div>
-
-                  <div
-                    className="flex flex-wrap items-center gap-6 text-xs tracking-wider text-[#d8c5a7] cinematic-fade"
-                    style={{ animationDelay: "0.5s" }}
-                  >
-                    <a
-                      className="group inline-flex items-center gap-2 transition hover:text-[#d9b676]"
-                      href="https://www.instagram.com/tetsuaki_makita/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="h-px w-4 bg-[#d8c5a7]/50 transition group-hover:bg-[#d9b676]"></span>
-                      Instagram
-                    </a>
-                    <a
-                      className="group inline-flex items-center gap-2 transition hover:text-[#d9b676]"
-                      href="https://x.com/tetsuaki_makita"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="h-px w-4 bg-[#d8c5a7]/50 transition group-hover:bg-[#d9b676]"></span>
-                      X (Twitter)
-                    </a>
-                    <a
-                      className="group inline-flex items-center gap-2 transition hover:text-[#d9b676]"
-                      href="https://www.facebook.com/tetsuaki104makita"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="h-px w-4 bg-[#d8c5a7]/50 transition group-hover:bg-[#d9b676]"></span>
-                      Facebook
-                    </a>
-                  </div>
-                </div>
-
-
-
-                <div
-                  className="hidden lg:block cinematic-rise max-w-xl text-lg tracking-widest text-[#f0e6d8] leading-loose space-y-8"
-                  style={{ animationDelay: "0.3s" }}
-                >
-                  <p>
-                    木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代のクラシックレースを描き続けた。
-                  </p>
-                  <p>
-                    1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
-                  </p>
-                  <p>
-                    現在は次女の京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
-                  </p>
-                </div>
-                {/* Mobile version matches desktop now, but keeping responsive structure if needed later */}
-                <div className="block lg:hidden cinematic-rise text-[#f0e6d8] leading-loose space-y-6" style={{ animationDelay: "0.3s" }}>
-                  <p>
-                    木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代のクラシックレースを描き続けた。
-                  </p>
-                  <p>
-                    1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
-                    現在は次女の京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
-                  </p>
                 </div>
               </div>
             </div>
+
+            {/* Scroll Indicator - Delayed Appearance */}
+            <div
+              className="absolute bottom-8 left-0 right-0 flex justify-center opacity-0 animate-[cinematic-fade_2s_ease-in-out_forwards]"
+              style={{ animationDelay: "10s" }}
+            >
+              <div className="flex flex-col items-center gap-2 text-[#d9b676]/60">
+                <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+                <div className="h-12 w-px bg-gradient-to-b from-[#d9b676]/60 to-transparent" />
+              </div>
+            </div>
           </div>
-          <div className="relative mt-24 h-px bg-gradient-to-r from-transparent via-[#d9b676]/30 to-transparent mx-6 sm:mx-12 lg:mx-20" />
         </section>
+
+
+        {/* Scroll Spacer to allow seeing the video before content rides up */}
+
+
 
         <main className="relative px-6 pb-24 pt-10 sm:px-12 lg:px-20 bg-[#f6f1e7]">
           <section id="prologue" className="mx-auto mt-8 max-w-6xl">
@@ -498,7 +452,7 @@ export default function Home() {
 
             <div className="relative mt-16 px-4 sm:px-0">
               <div className="grid gap-px bg-[#d8c8b2] border border-[#d8c8b2] sm:grid-cols-2 lg:grid-cols-3 bg-opacity-30">
-                {chapters.map((chapter, index) => (
+                {chapters.map((chapter) => (
                   <ScrollReveal
                     key={chapter.title}
                     direction="up"
@@ -541,7 +495,7 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-16 grid gap-10 lg:grid-cols-2 px-6 sm:px-0">
-              {exhibitGallery.map((work, index) => (
+              {exhibitGallery.map((work) => (
                 <ScrollReveal
                   key={work.name}
                   direction="up"
