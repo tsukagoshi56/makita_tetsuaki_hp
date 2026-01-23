@@ -357,7 +357,7 @@ export default function Home() {
 
             {/* Scroll Indicator - Delayed Appearance */}
             <div
-              className="absolute bottom-8 left-0 right-0 flex justify-center opacity-0 animate-[cinematic-fade_2s_ease-in-out_forwards]"
+              className="absolute bottom-32 left-0 right-0 flex justify-center opacity-0 animate-[cinematic-fade_2s_ease-in-out_forwards]"
               style={{ animationDelay: "10s" }}
             >
               <div className="flex flex-col items-center gap-2 text-[#d9b676]/60">
@@ -382,7 +382,7 @@ export default function Home() {
                     </p>
                     <p className="mt-8 text-lg leading-loose tracking-wide text-[#3a3127]">
                       1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
-                      現在は次女の京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
+                      現在は次女 京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
                     </p>
                   </div>
                 </div>
