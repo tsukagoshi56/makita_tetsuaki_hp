@@ -350,35 +350,7 @@ export default function Home() {
                     </h1>
                   </div>
 
-                  <div
-                    className="max-w-2xl text-base sm:text-lg tracking-wide text-[#d8c5a7] leading-loose opacity-0 animate-[cinematic-rise_1.5s_ease-out_forwards]"
-                    style={{ animationDelay: "1s" }}
-                  >
-                    <p className="mb-4">
-                      木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代のクラシックレースを描き続けた。
-                    </p>
-                    <p>
-                      現在は次女の京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
-                    </p>
-                  </div>
 
-                  <div
-                    className="flex flex-wrap gap-4 opacity-0 animate-[cinematic-rise_1.5s_ease-out_forwards]"
-                    style={{ animationDelay: "1.2s" }}
-                  >
-                    <a
-                      className="inline-flex items-center justify-center rounded-sm border border-[#d9b676] bg-[#d9b676]/10 px-6 py-3 text-sm font-medium text-[#d9b676] backdrop-blur transition hover:bg-[#d9b676] hover:text-[#0b1726]"
-                      href="#chapters"
-                    >
-                      年代記を見る
-                    </a>
-                    <a
-                      className="inline-flex items-center justify-center rounded-sm border border-[#f6f1e7]/30 px-6 py-3 text-sm font-medium text-[#f6f1e7] transition hover:bg-[#f6f1e7]/10"
-                      href="#gallery"
-                    >
-                      展示室へ
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
