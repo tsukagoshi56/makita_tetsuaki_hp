@@ -357,7 +357,7 @@ export default function Home() {
 
             {/* Scroll Indicator - Delayed Appearance */}
             <div
-              className="absolute bottom-32 left-0 right-0 flex justify-center opacity-0 animate-[cinematic-fade_2s_ease-in-out_forwards]"
+              className="absolute bottom-8 left-0 right-0 flex justify-center opacity-0 animate-[cinematic-fade_2s_ease-in-out_forwards]"
               style={{ animationDelay: "10s" }}
             >
               <div className="flex flex-col items-center gap-2 text-[#d9b676]/60">
