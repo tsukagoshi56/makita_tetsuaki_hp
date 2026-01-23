@@ -415,23 +415,23 @@ export default function Home() {
                   </div>
                 </div>
 
+
+
                 <div
-                  className="hidden lg:block cinematic-rise"
+                  className="hidden lg:block cinematic-rise max-w-xl text-lg tracking-widest text-[#f0e6d8] leading-loose space-y-8"
                   style={{ animationDelay: "0.3s" }}
                 >
-                  <div className="writing-vertical text-lg tracking-widest text-[#f0e6d8] h-[500px] border-r border-[#d9b676]/30 pr-8 mr-4 text-justify">
-                    <p>
-                      木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代のクラシックレースを描き続けた。
-                    </p>
-                    <p className="mt-8">
-                      1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
-                    </p>
-                    <p className="mt-8">
-                      現在は次女の京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
-                    </p>
-                  </div>
+                  <p>
+                    木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代のクラシックレースを描き続けた。
+                  </p>
+                  <p>
+                    1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
+                  </p>
+                  <p>
+                    現在は次女の京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
+                  </p>
                 </div>
-                {/* Mobile version of text (horizontal) */}
+                {/* Mobile version matches desktop now, but keeping responsive structure if needed later */}
                 <div className="block lg:hidden cinematic-rise text-[#f0e6d8] leading-loose space-y-6" style={{ animationDelay: "0.3s" }}>
                   <p>
                     木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代のクラシックレースを描き続けた。
@@ -761,7 +761,7 @@ export default function Home() {
             chronicle of automotive woodblock prints.
           </p>
         </footer>
-      </div>
-    </div>
+      </div >
+    </div >
   );
 }
