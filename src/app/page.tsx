@@ -369,9 +369,81 @@ export default function Home() {
         </section>
 
 
-        {/* Scroll Spacer to allow seeing the video before content rides up */}
+        {/* Introduction Section (Restored) */}
+        <section className="relative z-10 bg-[#fcfbf9] pt-24 pb-24 text-[#1f1b16]">
+          <div className="relative px-6 sm:px-12 lg:px-20">
+            <div className="mx-auto max-w-7xl">
+              <div className="grid gap-12 lg:grid-cols-2 lg:gap-24">
+                {/* Left Column: Intro Text */}
+                <div className="flex flex-col justify-center space-y-8">
+                  <div className="cinematic-rise">
+                    <p className="text-lg leading-loose tracking-wide text-[#3a3127]">
+                      木版画家・自動車画家として、ミッレミリアやタルガ・フローリオなど1920〜50年代のクラシックレースを描き続けた。
+                    </p>
+                    <p className="mt-8 text-lg leading-loose tracking-wide text-[#3a3127]">
+                      1993〜2009年にはMonterey Historic Automobile Racesの公式マスターアーティストとして記念版画を制作し、2022年11月23日に逝去。
+                      現在は次女の京子がSNSで作品アーカイブを紹介し、その足跡を伝え続けている。
+                    </p>
+                  </div>
+                </div>
 
+                {/* Right Column: Navigation & SNS */}
+                <div className="flex flex-col justify-center space-y-10 border-t border-[#d8c8b2] pt-10 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+                  <div className="flex flex-wrap gap-4 cinematic-rise" style={{ animationDelay: "0.2s" }}>
+                    <a
+                      className="inline-flex items-center justify-center rounded-sm border border-[#1f1b16] bg-transparent px-8 py-3 text-sm font-medium text-[#1f1b16] transition hover:bg-[#1f1b16] hover:text-[#fcfbf9]"
+                      href="#chapters"
+                    >
+                      年代記を見る
+                    </a>
+                    <a
+                      className="inline-flex items-center justify-center rounded-sm border border-[#d8c8b2] px-8 py-3 text-sm font-medium text-[#3a3127] transition hover:bg-[#e8decb]/30"
+                      href="#gallery"
+                    >
+                      展示室へ
+                    </a>
+                    <a
+                      className="inline-flex items-center justify-center rounded-sm border border-[#d8c8b2] px-8 py-3 text-sm font-medium text-[#3a3127] transition hover:bg-[#e8decb]/30"
+                      href="#archive"
+                    >
+                      Archives
+                    </a>
+                  </div>
 
+                  <div className="flex flex-wrap items-center gap-8 text-xs tracking-wider text-[#8c7b6c] cinematic-fade" style={{ animationDelay: "0.3s" }}>
+                    <a
+                      className="group inline-flex items-center gap-2 transition hover:text-[#d9b676]"
+                      href="https://www.instagram.com/tetsuaki_makita/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="h-px w-4 bg-[#d8c8b2] transition group-hover:bg-[#d9b676]"></span>
+                      Instagram
+                    </a>
+                    <a
+                      className="group inline-flex items-center gap-2 transition hover:text-[#d9b676]"
+                      href="https://x.com/tetsuaki_makita"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="h-px w-4 bg-[#d8c8b2] transition group-hover:bg-[#d9b676]"></span>
+                      X (Twitter)
+                    </a>
+                    <a
+                      className="group inline-flex items-center gap-2 transition hover:text-[#d9b676]"
+                      href="https://www.facebook.com/tetsuaki104makita"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="h-px w-4 bg-[#d8c8b2] transition group-hover:bg-[#d9b676]"></span>
+                      Facebook
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <main className="relative px-6 pb-24 pt-10 sm:px-12 lg:px-20 bg-[#f6f1e7]">
           <section id="prologue" className="mx-auto mt-8 max-w-6xl">
