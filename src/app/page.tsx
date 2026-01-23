@@ -296,9 +296,9 @@ function ScrollReveal({
 export default function Home() {
   return (
     <div className="min-h-screen museum-surface text-[#1f1b16]">
-      <div className="relative z-0">
-        <section className="relative h-screen w-full overflow-hidden bg-[#0b1726]">
-          <div className="absolute inset-0">
+      <div className="relative z-0 bg-black">
+        <section className="fixed inset-0 z-0 h-full w-full overflow-hidden bg-black">
+          <div className="absolute inset-0 flex items-center justify-center">
             <video
               autoPlay
               muted
@@ -310,17 +310,20 @@ export default function Home() {
               <source src="/instagram/790565921.026270.mp4" type="video/mp4" />
             </video>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0b1726]/30 via-transparent to-[#0b1726]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80" />
           <div className="absolute inset-0 film-grain" />
           <div className="absolute inset-0 vignette" />
+        </section>
 
+        {/* Scroll Spacer to allow seeing the video before content rides up */}
+        <div className="relative z-10 h-screen w-full pointer-events-none">
           <div className="absolute bottom-12 left-0 right-0 flex flex-col items-center justify-center gap-4 text-[#d9b676] opacity-80 mix-blend-screen cinematic-fade" style={{ animationDelay: "2s" }}>
             <span className="text-xs uppercase tracking-[0.3em]">Scroll to Explore</span>
             <div className="h-12 w-px bg-gradient-to-b from-[#d9b676] to-transparent" />
           </div>
-        </section>
+        </div>
 
-        <section className="relative z-10 -mt-20 bg-gradient-to-b from-transparent to-[#0b1726] pt-32 pb-24 text-[#f6f1e7]">
+        <section className="relative z-10 bg-gradient-to-b from-[#0b1726] to-[#0b1726]/95 pt-32 pb-24 text-[#f6f1e7] shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
           <div className="relative px-6 sm:px-12 lg:px-20">
             <div className="mx-auto flex max-w-5xl flex-col gap-8">
               <p
