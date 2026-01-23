@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { ReactNode, useEffect, useRef } from "react";
-import SlotCounter from "@/components/SlotCounter";
 
 const prologueFacts = [
   {
@@ -337,7 +336,7 @@ export default function Home() {
                 className="font-display text-4xl leading-tight sm:text-5xl lg:text-6xl cinematic-rise"
                 style={{ animationDelay: "0.2s" }}
               >
-                牧田哲明 <span className="text-[#d9b676]"><SlotCounter value="1935" /> — <SlotCounter value="2022" /></span>
+                牧田哲明 <span className="text-[#d9b676]">1935 — 2022</span>
               </h1>
               <p
                 className="max-w-2xl text-lg text-[#f0e6d8] cinematic-rise"
