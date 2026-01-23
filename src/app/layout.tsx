@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Shippori_Mincho, Zen_Kaku_Gothic_New } from "next/font/google";
+import { Zen_Old_Mincho, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
-const displayFont = Shippori_Mincho({
+const displayFont = Cormorant_Garamond({
   variable: "--font-display",
-  weight: ["400", "600", "700"],
+  weight: ["400", "600"],
   subsets: ["latin"],
 });
 
-const bodyFont = Zen_Kaku_Gothic_New({
+const bodyFont = Zen_Old_Mincho({
   variable: "--font-body",
-  weight: ["300", "400", "500", "700"],
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
