@@ -1,0 +1,92 @@
+name: Security update validation
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - vercel/react-server-components-cve-vu-88iu4v
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      NEXT_TELEMETRY_DISABLED: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npx --no-install tsc --noEmit
+      - run: npm run build
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+      # braces has no patched release (GHSA-vfj7-8cjw-p6xm).
+      # It is used by development-only ESLint tooling, not the production app.
+      - name: Report development dependency advisories
+        continue-on-error: true
+        run: npm audit --audit-level=high
+      - name: Confirm installed security versions
+        run: npm ls next react react-dom sharp postcss eslint-config-next
+      - name: Install isolated browser test tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/browser-smoke" --no-package-lock --ignore-scripts playwright@1
+          "$RUNNER_TEMP/browser-smoke/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Check production page on desktop and mobile
+        run: |
+          npm run start > "$RUNNER_TEMP/next-start.log" 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" || true' EXIT
+          for attempt in {1..30}; do
+            if curl --silent --fail http://localhost:3000/ > /dev/null; then break; fi
+            sleep 1
+          done
+          node <<'NODE'
+          const assert = require('node:assert/strict');
+          const { chromium } = require(process.env.RUNNER_TEMP + '/browser-smoke/node_modules/playwright');
+          (async () => {
+            const browser = await chromium.launch();
+            try {
+              for (const viewport of [{ width: 1440, height: 900 }, { width: 390, height: 844 }]) {
+                const page = await browser.newPage({ viewport });
+                const errors = [];
+                page.on('pageerror', error => errors.push(error.message));
+                page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+                const response = await page.goto('http://localhost:3000/', { waitUntil: 'domcontentloaded' });
+                assert.equal(response.status(), 200);
+                await page.getByRole('heading', { level: 1 }).waitFor();
+                assert.match(await page.title(), /牧田哲明/);
+                assert.equal(await page.locator('html').getAttribute('lang'), 'ja');
+                await page.locator('a[href="#gallery"]').click();
+                await page.waitForURL('**/#gallery');
+                await page.locator('#gallery').scrollIntoViewIfNeeded();
+                await page.waitForFunction(() => [...document.querySelectorAll('#gallery img')].every(img => img.complete && img.naturalWidth > 0));
+                assert.ok(await page.locator('#gallery img').count() > 0);
+                await page.locator('a[href="#archive"]').click();
+                await page.waitForURL('**/#archive');
+                await page.locator('#archive').scrollIntoViewIfNeeded();
+                await page.waitForFunction(() => [...document.querySelectorAll('#archive img')].every(img => img.complete && img.naturalWidth > 0));
+                assert.equal(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth), true);
+                const video = page.locator('video');
+                assert.equal(await video.count(), 1);
+                await page.waitForFunction(() => document.querySelector('video').readyState >= 2);
+                const videoState = await video.evaluate(v => ({ muted: v.muted, loop: v.loop, error: v.error?.message }));
+                assert.equal(videoState.muted, true);
+                assert.equal(videoState.loop, true);
+                assert.equal(videoState.error, undefined);
+                assert.deepEqual(errors, []);
+                console.log('PASS desktop/mobile smoke:', viewport, 'images, anchors, video and no browser errors');
+                await page.close();
+              }
+            } finally { await browser.close(); }
+          })().catch(error => { console.error(error); process.exitCode = 1; });
+          NODE
+      - name: Server log on failure
+        if: failure()
+        run: cat "$RUNNER_TEMP/next-start.log" 2>/dev/null || true
