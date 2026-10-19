@@ -25,7 +25,12 @@ jobs:
       - run: npm run lint
       - run: npx --no-install tsc --noEmit
       - run: npm run build
-      - name: Audit dependencies
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+      # braces has no patched release (GHSA-vfj7-8cjw-p6xm).
+      # It is used by development-only ESLint tooling, not the production app.
+      - name: Report development dependency advisories
+        continue-on-error: true
         run: npm audit --audit-level=high
       - name: Confirm installed security versions
         run: npm ls next react react-dom sharp postcss eslint-config-next
