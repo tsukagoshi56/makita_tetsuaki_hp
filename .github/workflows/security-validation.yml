@@ -58,7 +58,7 @@ jobs:
                 const errors = [];
                 page.on('pageerror', error => errors.push(error.message));
                 page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
-                const response = await page.goto('http://localhost:3000/', { waitUntil: 'networkidle' });
+                const response = await page.goto('http://localhost:3000/', { waitUntil: 'domcontentloaded' });
                 assert.equal(response.status(), 200);
                 await page.getByRole('heading', { level: 1 }).waitFor();
                 assert.match(await page.title(), /牧田哲明/);
