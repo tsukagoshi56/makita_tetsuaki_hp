@@ -18,8 +18,7 @@ jobs:
           node-version: 22
       - name: Regenerate dependency lockfile
         run: |
-          npm install --package-lock-only --ignore-scripts
-          npm update sharp --package-lock-only --ignore-scripts
+          npm update --package-lock-only --ignore-scripts
       - name: Save generated lockfile on the security branch
         run: |
           git config user.name "github-actions[bot]"
