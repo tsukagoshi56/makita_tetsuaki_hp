@@ -1,0 +1,39 @@
+name: Security update validation
+on:
+  push:
+    branches:
+      - vercel/react-server-components-cve-vu-88iu4v
+permissions:
+  contents: write
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Regenerate dependency lockfile
+        run: |
+          npm install --package-lock-only --ignore-scripts
+          npm update sharp --package-lock-only --ignore-scripts
+      - name: Save generated lockfile on the security branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package-lock.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Regenerate lockfile for patched Next.js dependencies"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+      - run: npm ci
+      - run: npm run lint
+      - run: npx --no-install tsc --noEmit
+      - run: npm run build
+      - name: Audit production dependencies
+        run: npm audit --omit=dev --audit-level=high
+      - name: Confirm installed security versions
+        run: npm ls next react react-dom sharp eslint-config-next
